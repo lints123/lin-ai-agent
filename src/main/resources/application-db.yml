@@ -1,0 +1,9 @@
+# 数据库配置 - 需要时通过 profile 激活：spring.profiles.active=local,db
+spring:
+  autoconfigure:
+    exclude: []   # 清除主配置的排除，恢复 DataSource/JPA 自动配置
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    open-in-view: false

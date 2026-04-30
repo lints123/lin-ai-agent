@@ -1,0 +1,24 @@
+Lin AI Agent 使用指南
+
+1. 项目简介
+Lin AI Agent 是一个基于 Spring Boot 3.4 + Spring AI 构建的智能对话助手。
+支持多种大语言模型（通义千问、NVIDIA Llama），提供流式/非流式对话、RAG 知识库检索等功能。
+
+2. 核心功能
+- 多模型切换：支持 qwen-plus、llama-3.1-70b 等模型
+- 流式对话：实时逐字输出 AI 回复
+- RAG 知识库：上传文档后，AI 可基于文档内容回答问题
+- 暗色/亮色主题：支持一键切换
+- Agent 模式：支持工具调用的智能代理
+
+3. 技术栈
+- 后端：Java 21 + Spring Boot 3.4.4 + Spring AI Alibaba 1.1.2.2
+- 前端：Vue 3 + TypeScript + Tailwind CSS v4 + Element Plus
+- 数据库：MySQL + Spring Data JPA
+- 向量存储：SimpleVectorStore（JSON 文件持久化）
+- AI 服务：通义千问 DashScope（Embedding + Chat）
+
+4. RAG 使用说明
+将 PDF 或 TXT 文档放入项目的 docs/ 目录，应用启动时会自动加载到向量库。
+首次加载后会生成 vector-store.json 缓存文件，后续启动直接读取缓存。
+也可以通过聊天界面的上传按钮动态添加文档。

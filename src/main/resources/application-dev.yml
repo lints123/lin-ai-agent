@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    url: jdbc:mysql://38.181.25.197:3306/guanwang?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+    username: guanwang
+    password: RTYDCmFzR7WGib65
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  ai:
+    dashscope:
+      api-key: sk-a2a6ea2e47414c7c9a5ddb3602ff3542
+      chat:
+        options:
+          model: qwen-plus
+
+ai:
+  models:
+    default-model: qwen
+    nvidia:
+      base-url: https://integrate.api.nvidia.com
+      api-key: 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
+      model: meta/llama-3.1-70b-instruct
